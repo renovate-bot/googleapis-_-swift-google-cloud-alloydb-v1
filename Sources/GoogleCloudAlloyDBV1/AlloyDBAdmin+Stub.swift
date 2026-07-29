@@ -28,11 +28,11 @@ extension Clients {
   protocol AlloyDBAdminStub {
     func listClusters(
       request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListClustersResponse
+    ) async throws -> GoogleCloudAlloyDBV1.ListClustersResponse
 
     func getCluster(
       request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.Cluster
+    ) async throws -> GoogleCloudAlloyDBV1.Cluster
 
     func createCluster(
       request: CreateClusterRequest, options: GoogleCloudGax.RequestOptions
@@ -76,11 +76,11 @@ extension Clients {
 
     func listInstances(
       request: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListInstancesResponse
+    ) async throws -> GoogleCloudAlloyDBV1.ListInstancesResponse
 
     func getInstance(
       request: GetInstanceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.Instance
+    ) async throws -> GoogleCloudAlloyDBV1.Instance
 
     func createInstance(
       request: CreateInstanceRequest, options: GoogleCloudGax.RequestOptions
@@ -116,15 +116,15 @@ extension Clients {
 
     func executeSql(
       request: ExecuteSqlRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ExecuteSqlResponse
+    ) async throws -> GoogleCloudAlloyDBV1.ExecuteSqlResponse
 
     func listBackups(
       request: ListBackupsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListBackupsResponse
+    ) async throws -> GoogleCloudAlloyDBV1.ListBackupsResponse
 
     func getBackup(
       request: GetBackupRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.Backup
+    ) async throws -> GoogleCloudAlloyDBV1.Backup
 
     func createBackup(
       request: CreateBackupRequest, options: GoogleCloudGax.RequestOptions
@@ -140,31 +140,31 @@ extension Clients {
 
     func listSupportedDatabaseFlags(
       request: ListSupportedDatabaseFlagsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListSupportedDatabaseFlagsResponse
+    ) async throws -> GoogleCloudAlloyDBV1.ListSupportedDatabaseFlagsResponse
 
     func generateClientCertificate(
       request: GenerateClientCertificateRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.GenerateClientCertificateResponse
+    ) async throws -> GoogleCloudAlloyDBV1.GenerateClientCertificateResponse
 
     func getConnectionInfo(
       request: GetConnectionInfoRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ConnectionInfo
+    ) async throws -> GoogleCloudAlloyDBV1.ConnectionInfo
 
     func listUsers(
       request: ListUsersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListUsersResponse
+    ) async throws -> GoogleCloudAlloyDBV1.ListUsersResponse
 
     func getUser(
       request: GetUserRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.User
+    ) async throws -> GoogleCloudAlloyDBV1.User
 
     func createUser(
       request: CreateUserRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.User
+    ) async throws -> GoogleCloudAlloyDBV1.User
 
     func updateUser(
       request: UpdateUserRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.User
+    ) async throws -> GoogleCloudAlloyDBV1.User
 
     func deleteUser(
       request: DeleteUserRequest, options: GoogleCloudGax.RequestOptions
@@ -172,7 +172,7 @@ extension Clients {
 
     func listDatabases(
       request: ListDatabasesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListDatabasesResponse
+    ) async throws -> GoogleCloudAlloyDBV1.ListDatabasesResponse
 
     func listLocations(
       request: GoogleCloudLocation.ListLocationsRequest, options: GoogleCloudGax.RequestOptions
@@ -209,7 +209,7 @@ extension Clients {
 
     public func listClusters(
       request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListClustersResponse {
+    ) async throws -> GoogleCloudAlloyDBV1.ListClustersResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -229,12 +229,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.ListClustersResponse.self, from: data)
+        GoogleCloudAlloyDBV1.ListClustersResponse.self, from: data)
     }
 
     public func getCluster(
       request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.Cluster {
+    ) async throws -> GoogleCloudAlloyDBV1.Cluster {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -251,7 +251,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.Cluster.self, from: data)
+        GoogleCloudAlloyDBV1.Cluster.self, from: data)
     }
 
     public func createCluster(
@@ -498,7 +498,7 @@ extension Clients {
 
     public func listInstances(
       request: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListInstancesResponse {
+    ) async throws -> GoogleCloudAlloyDBV1.ListInstancesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -518,12 +518,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.ListInstancesResponse.self, from: data)
+        GoogleCloudAlloyDBV1.ListInstancesResponse.self, from: data)
     }
 
     public func getInstance(
       request: GetInstanceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.Instance {
+    ) async throws -> GoogleCloudAlloyDBV1.Instance {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -540,7 +540,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.Instance.self, from: data)
+        GoogleCloudAlloyDBV1.Instance.self, from: data)
     }
 
     public func createInstance(
@@ -747,7 +747,7 @@ extension Clients {
 
     public func executeSql(
       request: ExecuteSqlRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ExecuteSqlResponse {
+    ) async throws -> GoogleCloudAlloyDBV1.ExecuteSqlResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.instance as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.instance' is not set or is empty")
@@ -764,12 +764,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.ExecuteSqlResponse.self, from: data)
+        GoogleCloudAlloyDBV1.ExecuteSqlResponse.self, from: data)
     }
 
     public func listBackups(
       request: ListBackupsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListBackupsResponse {
+    ) async throws -> GoogleCloudAlloyDBV1.ListBackupsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -789,12 +789,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.ListBackupsResponse.self, from: data)
+        GoogleCloudAlloyDBV1.ListBackupsResponse.self, from: data)
     }
 
     public func getBackup(
       request: GetBackupRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.Backup {
+    ) async throws -> GoogleCloudAlloyDBV1.Backup {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -809,7 +809,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.Backup.self, from: data)
+        GoogleCloudAlloyDBV1.Backup.self, from: data)
     }
 
     public func createBackup(
@@ -895,7 +895,7 @@ extension Clients {
 
     public func listSupportedDatabaseFlags(
       request: ListSupportedDatabaseFlagsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListSupportedDatabaseFlagsResponse {
+    ) async throws -> GoogleCloudAlloyDBV1.ListSupportedDatabaseFlagsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -914,12 +914,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.ListSupportedDatabaseFlagsResponse.self, from: data)
+        GoogleCloudAlloyDBV1.ListSupportedDatabaseFlagsResponse.self, from: data)
     }
 
     public func generateClientCertificate(
       request: GenerateClientCertificateRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.GenerateClientCertificateResponse {
+    ) async throws -> GoogleCloudAlloyDBV1.GenerateClientCertificateResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -936,12 +936,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.GenerateClientCertificateResponse.self, from: data)
+        GoogleCloudAlloyDBV1.GenerateClientCertificateResponse.self, from: data)
     }
 
     public func getConnectionInfo(
       request: GetConnectionInfoRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ConnectionInfo {
+    ) async throws -> GoogleCloudAlloyDBV1.ConnectionInfo {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -958,12 +958,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.ConnectionInfo.self, from: data)
+        GoogleCloudAlloyDBV1.ConnectionInfo.self, from: data)
     }
 
     public func listUsers(
       request: ListUsersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListUsersResponse {
+    ) async throws -> GoogleCloudAlloyDBV1.ListUsersResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -983,12 +983,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.ListUsersResponse.self, from: data)
+        GoogleCloudAlloyDBV1.ListUsersResponse.self, from: data)
     }
 
     public func getUser(
       request: GetUserRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.User {
+    ) async throws -> GoogleCloudAlloyDBV1.User {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -1003,12 +1003,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.User.self, from: data)
+        GoogleCloudAlloyDBV1.User.self, from: data)
     }
 
     public func createUser(
       request: CreateUserRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.User {
+    ) async throws -> GoogleCloudAlloyDBV1.User {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -1031,12 +1031,12 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.User.self, from: data)
+        GoogleCloudAlloyDBV1.User.self, from: data)
     }
 
     public func updateUser(
       request: UpdateUserRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.User {
+    ) async throws -> GoogleCloudAlloyDBV1.User {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.user.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.user.name' is not set or is empty")
@@ -1060,7 +1060,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.User.self, from: data)
+        GoogleCloudAlloyDBV1.User.self, from: data)
     }
 
     public func deleteUser(
@@ -1086,7 +1086,7 @@ extension Clients {
 
     public func listDatabases(
       request: ListDatabasesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAlloydbV1.ListDatabasesResponse {
+    ) async throws -> GoogleCloudAlloyDBV1.ListDatabasesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -1105,7 +1105,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAlloydbV1.ListDatabasesResponse.self, from: data)
+        GoogleCloudAlloyDBV1.ListDatabasesResponse.self, from: data)
     }
 
     public func listLocations(
